@@ -1,0 +1,806 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Fonts */
+html {
+  /* font-family: "Poppins", sans-serif; */
+  font-size: 1.2em;
+}
+
+/* Color Properties */
+/* default, light mode styles set with variables */
+:root {
+  --color-primary1: #fae9d2;
+  --color-secondary1: #43c48c;
+  --color-accent1: #111516;
+  --color-accent2: #5059ac;
+}
+
+h1,
+h2,
+h3 {
+  /* color: var(--color-secondary1);
+  font-family: "Noto Serif Display", serif; */
+  margin-bottom: 1rem;
+  color: var(--color-secondary1);
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  /* color: var(--color-secondary1);
+  font-family: "Poppins", sans-serif; */
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent1);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary1);
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-accent1);
+  font-weight: bold;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-accent2);
+  color: var(--color-primary1);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-secondary1);
+  color: var(--color-primary1);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary1);
+}
+
+nav a {
+  color: var(--color-primary1);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.logo {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-primary1);
+}
+
+header p {
+  color: var(--color-accent1);
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_graphics {
+  width: 25vw;
+  height: 25vw;
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 250px;
+  background-image: url(images/food3.png);
+  background-size: cover;
+  margin-bottom: 1rem;
+  padding: 3rem;
+}
+
+.header_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+#advantages {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: var(--color-primary1);
+}
+
+#advantages h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--color-secondary1);
+}
+
+.advantages_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.advantages_card {
+  background-color: var(--color-accent2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
+  margin: 0.6rem;
+  color: var(--color-primary1);
+}
+
+.advantages_card_graphics {
+  width: 100%;
+  height: 150px;
+  background-image: url(images/food4.png);
+  background-size: cover;
+  margin-bottom: 1rem;
+}
+
+.advantages_card_text h3 {
+  font-size: 21px;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary1);
+}
+
+.advantages_card_text p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: var(--color-primary1);
+}
+
+/* product section */
+#product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-primary1);
+}
+
+#product h2 {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+#product article {
+  display: flex;
+  min-height: 50vh;
+  padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#product article:first-child {
+  min-height: 40vh;
+}
+
+.product_text {
+  flex-basis: 50%;
+  padding: 1rem;
+}
+
+#product article:first-child .product_text {
+  width: 75vw;
+  min-width: 300px;
+}
+
+.product_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  margin-right: 2rem;
+  background-image: url(images/food.png);
+  background-size: cover;
+  border-radius: 300px;
+}
+.product_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+/* highlight sections */
+/* Big headline component */
+.highlight {
+  padding-bottom: 5rem;
+  background-color: var(--color-primary1);
+}
+
+.highlight h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 3rem;
+  padding-left: 1rem;
+}
+
+/* Two small cards */
+.highlight_small_cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.highlight_small_cards div {
+  width: 40%;
+  background-color: var(--color-accent2);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight_small_cards div h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight_small_cards div p {
+  font-size: 1.5rem;
+  color: var(--color-primary1);
+}
+
+.highlight_btb {
+  margin-left: 2rem;
+}
+
+/* team section */
+#team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-primary1);
+}
+
+#team h2 {
+  text-align: center;
+  margin: 0 auto;
+  flex-basis: 100%;
+}
+
+#team article {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#team article:first-child {
+  min-height: 40vh;
+}
+
+.team_text a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-accent2);
+  text-decoration: none;
+  color: var(--color-primary1);
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.team_text a:hover {
+  background-color: var(--color-secondary1);
+}
+
+#team article:first-child .team_text {
+  width: 75vw;
+  min-width: 300px;
+}
+
+.team_graphics1 {
+  width: 23vw;
+  height: 14vw;
+  min-width: 150px;
+  min-height: 150px;
+  margin-right: 2rem;
+  background-image: url(images/man.png);
+  background-size: cover;
+  border-radius: 300px;
+  flex-basis: 30%;
+}
+.team_graphics2 {
+  width: 23vw;
+  height: 14vw;
+  min-width: 150px;
+  min-height: 150px;
+  margin-right: 2rem;
+  background-image: url(images/woman.png);
+  background-size: cover;
+  border-radius: 300px;
+  flex-basis: 30%;
+}
+
+.team_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+/* Request section */
+#request {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-primary1);
+}
+
+#request div {
+  width: 50vw;
+  min-width: 300px;
+}
+
+/* Contact form section */
+#contact {
+  background-color: var(--color-primary1);
+  padding: 4rem;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+#contact p {
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+#contact form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#contact .form_group {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+#contact .form_group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#contact .form_group input[type="text"],
+#contact .form_group input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease;
+}
+
+#contact .form_group input[type="text"]:focus,
+#contact .form_group input[type="email"]:focus,
+#contact .form_group textarea:focus {
+  outline: none;
+  border-color: #8e44ad;
+}
+
+#contact .form_group textarea {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease;
+}
+
+#contact .form_group:nth-child(1),
+#contact .form_group:nth-child(2) {
+  width: calc(50% - 0.5rem);
+}
+
+#contact .form_group:nth-child(1) input[type="text"],
+#contact .form_group:nth-child(2) input[type="email"] {
+  width: 90%;
+}
+
+#contact .form_group:nth-child(3) textarea {
+  width: 95%;
+}
+
+#contact .form_group button[type="submit"] {
+  background-color: var(--color-accent2);
+  color: var(--color-primary1);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact .form_group button[type="submit"]:hover {
+  background-color: var(--color-secondary1);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-secondary1);
+}
+
+footer h2,
+footer h3 {
+  /* color: var(--color-secondary1); */
+  margin-bottom: 1rem;
+  color: var(--color-accent1);
+}
+
+footer a {
+  /*  color: var(--color-secondary1); */
+  color: var(--color-accent1);
+}
+
+footer section.left {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+/* For screens smaller than 768px (e.g. mobile devices) */
+@media (max-width: 767px) {
+  /* Modify the nav element */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  html {
+    font-size: 15px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #000c10;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+  }
+
+  p {
+    color: #000c10;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+
+  /* Modify the logo link */
+  nav a {
+    margin: 10px 0;
+  }
+
+  /* Modify the header */
+  .header_text {
+    text-align: center;
+  }
+
+  .header_graphics {
+    display: none;
+  }
+
+  /* Modify the intro section */
+  #intro {
+    flex-direction: column-reverse;
+  }
+
+  .intro_text {
+    margin: 20px;
+  }
+
+  .intro_graphics {
+    display: none;
+  }
+
+  /* Modify the cards section */
+  .card {
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-header {
+    background-color: #f5f5f5;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .card-body {
+    padding: 10px;
+  }
+  .card-image {
+    height: 150px; /* change this value to adjust the height of the images */
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-footer {
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+
+  /* Modify the info section */
+  .info_text {
+    text-align: center;
+  }
+
+  #info {
+    padding-left: 0rem;
+  }
+
+  #contact div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #contact input[type="text"] {
+    margin: 10px 0;
+  }
+
+  #contact button[type="button"] {
+    margin: 10px 0;
+  }
+
+  /* highlight sections /
+/ Big headline component */
+  .highlight {
+    padding-bottom: 3rem;
+  }
+
+  .highlight h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding-left: 0.5rem;
+  }
+
+  /* Two small cards */
+  .highlight_small_cards {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .highlight_small_cards div {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .highlight_btb {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  /* Contact form section */
+  #contact {
+    padding: 2rem;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  #contact p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  #contact form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact .form_group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #contact .form_group:nth-child(1),
+  #contact .form_group:nth-child(2),
+  #contact .form_group:nth-child(3) {
+    width: 100%;
+  }
+
+  #contact .form_group:nth-child(1) input[type="text"],
+  #contact .form_group:nth-child(2) input[type="email"] {
+    width: 100%;
+  }
+
+  #contact .form_group:nth-child(3) textarea {
+    width: 100%;
+  }
+
+  #contact .form_group button[type="submit"] {
+    width: 100%;
+  }
+
+  /* Modify the footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  footer div {
+    text-align: center;
+  }
+
+  footer h2 {
+    margin: 0;
+  }
+
+  footer ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+  }
+
+  footer li {
+    margin: 5px 0;
+  }
+
+  footer a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  footer section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  footer h3 {
+    margin: 0;
+  }
+
+  footer ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+  }
+
+  footer li {
+    margin: 5px 0;
+  }
+
+  footer a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* highlight sections /
+/ Big headline component */
+  .highlight {
+    padding-bottom: 3rem;
+  }
+
+  .highlight h2 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-left: 0.5rem;
+  }
+
+  /* Two small cards */
+  .highlight_small_cards {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    margin-right: 6rem;
+  }
+
+  .highlight_small_cards div {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .highlight_btb {
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+  }
+}
